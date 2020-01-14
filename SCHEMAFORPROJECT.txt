@@ -1,0 +1,17 @@
+Student table
+Fields:
+Age number 
+Studentemail email
+Dateofjoining date
+confirmed boolean
+Comments textarea
+Country
+City 
+
+Student marks table
+Fields:
+MD to studentmaster
+Marks number
+Subject picklist 
+Year number
+
