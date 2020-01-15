@@ -1,0 +1,962 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.18362}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Salesforce Admin Interview Questions\par
+1). What is the difference between public cloud and private cloud? Is salesforce.com is a public cloud or private cloud?\par
+Public Cloud: Could services are provided \ldblquote as a service\rdblquote  over the Internet with little or no control over the underlying technology infrastructure. More than one tenant can use the same resources.\par
+Private Cloud: This also offers activities and functions \ldblquote as a service\rdblquote  but is deployed over a company intranet or hosted datacenter. This is private product for a company or organization offering advance security.\par
+Salesforce.com: Is a public cloud as it is hosted on salesforce.com data centers and data of more than one tenant resides on same servers.\par
+(2).What are different kinds of reports?\par
+1. Tabular: Tabular reports are the simplest and fastest way to look at data. Similar to a spreadsheet, they consist simply of an ordered set of fields in columns, with each matching record listed in a row. Tabular reports are best for creating lists of records or a list with a single grand total. They can\rquote t be used to create groups of data or charts, and can\rquote t be used in dashboards unless rows are limited. Examples include contact mailing lists and activity reports.\par
+2. Summary: Summary reports are similar to tabular reports, but also allow users to group rows of data, view subtotals, and create charts. They can be used as the source report for dashboard components. Use this type for a report to show subtotals based on the value of a particular field or when you want to create a hierarchical list, such as all opportunities for your team, subtotaled by Stage and Owner. Summary reports with no groupings show as tabular reports on the report run page.\par
+3. Matrix: Matrix reports are similar to summary reports but allow you to group and summarize data by both rows and columns. They can be used as the source report for dashboard components. Use this type for comparing related totals, especially if you have large amounts of data to summarize and you need to compare values in several different fields, or you want to look at data by date and by product, person, or geography. Matrix reports without at least one row and one column grouping show as summary reports on the report run page.\par
+4. Joined: Joined reports let you create multiple report blocks that provide different views of your data. Each block acts like a \ldblquote sub-report,\rdblquote  with its own fields, columns, sorting, and filtering. A joined report can even contain data from different report types.\par
+(3). What are different kinds of dashboard component?\par
+1. Chart: Use a chart when you want to show data graphically.\par
+2. Gauge: Use a gauge when you have a single value that you want to show within a range of custom values.\par
+3. Metric: Use a metric when you have one key value to display.\par
+Enter metric labels directly on components by clicking the empty text field next to the grand total.\par
+Metric components placed directly above and below each other in a dashboard column are displayed together as a single component.\par
+4. Table: Use a table to show a set of report data in column form.\par
+5. Visualforce Page: Use a Visualforce page when you want to create a custom component or show information not available in another component type\par
+6. Custom S-Control: Custom S-Controls can contain any type of content that you can display or run in a browser, for example, a Java applet, an ActiveX control, an Excel file, or a custom HTML Web form\par
+(4). What actions can be performed using Workflows?\par
+Following workflow actions can be performed in a workflow:\par
+1. Email Alert:\par
+Email alerts are workflow and approval actions that are generated using an email template by a workflow rule or approval process and sent to designated recipients, either Salesforce users or others. Workflow alerts can be sent to any user or contact, as long as they have a valid email address.\par
+2. Field Update:\par
+Field updates are workflow and approval actions that specify the field you want updated and the new value for it. Depending on the type of field, you can choose to apply a specific value, make the value blank, or calculate a value based on a formula you create.\par
+3. Task:\par
+Assigns a task to a user you specify. You can specify the Subject, Status, Priority, and Due Dateof the task. Tasks are workflow and approval actions that are triggered by workflow rules or approval processes.\par
+4. Outbound Message:\par
+An outbound message is a workflow, approval, or milestone action that sends the information you specify to an endpoint you designate, such as an external service. An outbound message sends the data in the specified fields in the form of a SOAP message to the endpoint.\par
+(5). What are groups in SFDC and what is their use?\par
+Groups are sets of users. They can contain individual users, other groups, the users in a particular role or territory, or the users in a particular role or territory plus all of the users below that role or territory in the hierarchy.\par
+There are two types of groups:\par
+Public groups: Only administrators can create public groups. They can be used by everyone in the organization.\par
+Personal groups: Each user can create groups for their personal use.\par
+You can use groups in the following ways:\par
+To set up default sharing access via a sharing rule\par
+To share your records with other users\par
+To specify that you want to synchronize contacts owned by others users\par
+To add multiple users to a Salesforce CRM Content library\par
+To assign users to specific actions in Salesforce Knowledge\par
+(6). What is Visualforce View State?\par
+Visualforce pages that contain a form component also contain an encrypted, hidden form field that encapsulates the view state of the page. This view state is automatically created, and as its name suggests, it holds the state of the page \f1\endash  state that includes the components, field values and controller state.\par
+Note:\par
+Minimize number of form on a page.  Use apex:actionRegion instead of using 2 or more forms.\par
+Refine your SOQL to only retrieve the data needed by the page.\par
+All public and private data members present in Standard, Custom and Controller extensions are saved.\par
+The transient variables are not passed to view state and therefore not stored in View State.\par
+For more information please refer to the link:\par
+How to enable view state in Salesforce\par
+{{\field{\*\fldinst{HYPERLINK http://theblogreaders.com/maximum-view-state-size-limit-exceeded-in-salesforce }}{\fldrslt{http://theblogreaders.com/maximum-view-state-size-limit-exceeded-in-salesforce\ul0\cf0}}}}\f1\fs22\par
+{{\field{\*\fldinst{HYPERLINK http://wiki.developerforce.com/page/An_Introduction_to_Visualforce_View_State }}{\fldrslt{http://wiki.developerforce.com/page/An_Introduction_to_Visualforce_View_State\ul0\cf0}}}}\f1\fs22\par
+(7). Which objects can be imported by Import Wizard?\par
+Following objects can be imported using import wizard.\par
+Accounts\par
+Contacts\par
+Leads\par
+Solutions\par
+Custom Objects\par
+(8). What is Profile and Components?\par
+profile contains user permissions and access settings that control what users can do within their organization.\par
+A collection of settings and permissions that define how a user accesses records\par
+\endash  Determines how users see data and what they can do within the application\par
+\endash  A profile can have many users, but a user can have only one profile\par
+Profiles Components:\par
+Which standard and custom apps users can view\par
+Which tabs users can view\par
+Which record types are available to users\par
+Which page layouts users see\par
+Object permissions that allow users to create, read, edit, and delete records\par
+Which fields within objects users can view and edit\par
+Permissions that allow users to manage the system and apps within it\par
+Which Apex classes and Visualforce pages users can access\par
+Which desktop clients users can access\par
+The hours during which and IP addresses from which users can log in\par
+Which service providers users can access (if Salesforce is enabled as an identity provider)\par
+(9). What is PermissionSet?\par
+PermissionSet represents a set of permissions that\rquote s used to grant additional access to one or more users without changing their profile or reassigning profiles. You can use permission sets to grant access, but not to deny access.\par
+Every PermissionSet is associated with a user license. You can only assign permission sets to users who have the same user license that\rquote s associated with the permission set. If you want to assign similar permissions to users with different licenses, create multiple permission sets with the same permissions, but with different licenses.\par
+Permission sets include settings for:\par
+Assigned apps\par
+Object settings, which include:\par
+Tab settings\par
+Object permissions\par
+Field permissions\par
+App permissions\par
+Apex class access\par
+Visualforce page access\par
+System permissions\par
+Service providers (only if you\rquote ve enabled Salesforce as an identity provider)\par
+(10). Profile Vs Permission Sets Permissions and Access Settings?\par
+1. User permissions and access settings specify what users can do within an organization.\par
+2. Permissions and access settings are specified in user profiles and permission sets. Every user is assigned only one profile, but can also have multiple permission sets.\par
+3. When determining access for your users, it\rquote s a good idea to use profiles to assign the minimum permissions and access settings for specific groups of users, then use permission sets to grant additional permissions.\par
+The following table shows the types of permissions and access settings that are specified in profiles and permission sets. Some profile settings aren\rquote t included in permission sets.\par
+Permission or Setting Type\tab In Profiles?\tab In Permission Sets?\par
+Assigned apps\tab TRUE\tab TRUE\par
+Tab settings\tab TRUE\tab TRUE\par
+Record type assignments\tab TRUE\tab\par
+Page layout assignments\tab TRUE\tab\par
+Object permissions\tab TRUE\tab TRUE\par
+Field permissions\tab TRUE\tab TRUE\par
+User permissions (app and system)\tab TRUE\tab TRUE\par
+Apex class access\tab TRUE\tab TRUE\par
+Visualforce page access\tab TRUE\tab TRUE\par
+Service provider access (if Salesforce is enabled as an identity provider)\tab TRUE\tab TRUE\par
+Desktop client access\tab TRUE\tab\par
+Login hours\tab TRUE\tab\par
+Login IP ranges\tab TRUE\par
+{{\field{\*\fldinst{HYPERLINK http://login.salesforce.com/help/doc/en/perm_sets_overview.htm }}{\fldrslt{http://login.salesforce.com/help/doc/en/perm_sets_overview.htm\ul0\cf0}}}}\f1\fs22\par
+\par
+(11). What are the Standard Profiles available in Salesforce?\par
+Six (6) Standard Profiles  (EE/UE and PE)\par
+Standard User \endash  Can view, edit, and delete their own records\par
+Solution Manager \endash  Standard User permissions + Can manage published solutions + Can manage categories\par
+Marketing User \endash  Standard User permissions + Can import leads for the organization\par
+Contract Manager \endash  Standard User permissions + Can edit, approve, activate, and delete contracts\par
+Read-Only \endash  Can only view records\par
+System Administrator \endash  \ldblquote Super User,\rdblquote  can customize and administer the application\par
+(12). What is the Force.com Platform?\par
+- Customize, integrate and create enterprise applications as a service and without software.\par
+- Customize standard applications provided by salesforce.com or build their own on-demand applications\par
+- Group standard and custom tabs into new custom applications\par
+(13). Salesforce Editions and Limits?\par
+- Personal Edition\par
+- Contact Manager\par
+- Group Edition\par
+- Professional Edition\par
+- Enterprise Edition\par
+- Unlimited Edition\par
+- Developer Edition\par
+{{\field{\*\fldinst{HYPERLINK http://login.salesforce.com/help/doc/en/limits.htm }}{\fldrslt{http://login.salesforce.com/help/doc/en/limits.htm\ul0\cf0}}}}\f1\fs22\par
+(14). What are Standard Business Objects?\par
+\bullet  Campaigns: A Campaign is any marketing project that you want to plan, manage, and track in Salesforce.\par
+\bullet  Leads: A Lead is any person, organization or company that may be interested in your products. Sometimes Leads are referred to as Prospects or Suspects. Leads are not yet customers.\par
+\bullet  Accounts: An Account is an organization, individual or company involved with your business such as customers, competitors and partners that you wish to track in Salesforce.\par
+\bullet  Contacts: A Contact is any individual or influencer associated with an account that you want to track in Salesforce.\par
+\bullet  Opportunities: An Opportunity is any potential revenue-generating event (\ldblquote sales deal\rdblquote  ) that you want to\par
+track in Salesforce.\par
+\bullet  Cases: A case is a detailed description of a customer\rquote s feedback, problem or question.\par
+\bullet  Solutions: A solution is a detailed description of a customer issue and the resolution of that issue. The\par
+collection of your organization\rquote s solutions is sometimes referred to as the solution knowledge base.\par
+\bullet  Forecasts: A forecast is your best estimate of how much revenue you can generate in a quarter.\par
+\bullet  Documents:\par
+\bullet  Reports: Reports are summaries and analyses of your data, which you can display or print.\par
+\bullet  Dashboards: Dashboards give you a real-time snapshot of corporate metrics and key performance\par
+indicators. A dashboard is a group of different charts (or components) that graphically display your custom\par
+report data.\par
+\bullet  Calendar and Task: Activities are both tasks and scheduled calendar events. You can define and track\par
+activities for many different objects, including campaigns, accounts, contacts, and leads.\par
+\bullet  Products: Products are the individual items that you sell on your opportunities. (Please note that Products are available in EE/UE and Developer and in PE for an additional fee.)\par
+Please note, not all Standard Objects are depicted in the above slide or discussed in the notes.\par
+Please refer to Help in Salesforce for more information.\par
+Standard Objects\par
+Data Model\par
+(15). What is a Company Profile?\par
+Contains core information for your company\par
+\bullet  Language, Locale and Time Zone\par
+\bullet  Licenses\par
+\bullet  Storage and Used Space\par
+\bullet  Fiscal Year\par
+\bullet  Primary Contact and Address information\par
+\bullet  Manage Currencies\par
+(16). What is a Fiscal Year in Salesforce?\par
+\endash  Used for an organizations financial planning\par
+\endash  Usually a year in length\par
+\endash  Impacts forecasts, quotas and reports\par
+Salesforce allows two types:\par
+\endash Standard Fiscal Years are periods that follow the Gregorian calendar, but can start on the first day of any\par
+month of the year. (A Gregorian Year is a calendar based on a 12 Month Structure and is used throughout\par
+much of the world.)\par
+\endash Custom Fiscal Years are for companies that break down their fiscal years, quarters and weeks in to custom fiscal periods based on their financial planning requirements.\par
+Forecasting can NOT be used with Custom Fiscal Years\par
+Customizable Forecasting must be enabled for use with Custom Fiscal Years\par
+(17). What is Standard and Custom Fields in Salesforce\par
+?\par
+Standard Fields\par
+What is a Standard Field?\par
+\endash  Standard Fields are pre-defined in Salesforce\par
+\endash  You cannot delete standard fields but you can remove non-required standard fields from a page layout\par
+Standard Field customizations include the ability to change standard field labels and tabs\par
+You can change the display labels of standard tabs, objects, fields, and other related user interface labels so they better reflect your organization\rquote s business requirements.\par
+Renamed labels \endash  for example, \ldblquote Accounts\rdblquote  changed to \ldblquote Companies\rdblquote  \endash  display on all user pages, in Outlook Edition, and in Offline Edition.\par
+It\rquote s important to note that all pages in the Setup area use the default, original labels.\par
+Reports and views are not renamed based on the new label value.\par
+Custom Fields\par
+What is a Custom Field?\par
+\endash  Capture information unique to your business process by creating custom fields with custom field help for  each of the tabs that your organization uses \endash  Limits:\par
+{{\field{\*\fldinst{HYPERLINK https://na1.salesforce.com/help/doc/en/limits.htm }}{\fldrslt{https://na1.salesforce.com/help/doc/en/limits.htm\ul0\cf0}}}}\f1\fs22\par
+\endash Recycle Bin for Deleted Custom Fields\par
+\endash Custom fields are deleted permanently after 45 days\par
+(18). Is it possible to change the existing data types of custom fields, if Yes please explanin?\par
+Yes. Its possible but Changing the data type of an existing custom field can cause data loss in the following situations:\par
+Changing to or from type Date or Date/Time\par
+Changing to Number from any other type\par
+Changing to Percent from any other type\par
+Changing to Currency from any other type\par
+Changing from Checkbox to any other type\par
+Changing from Picklist (Multi-Select) to any other type\par
+Changing to Picklist (Multi-Select) from any type except Picklist\par
+Changing from Auto Number to any other type\par
+Changing to Auto Number from any type except Text\par
+Changing from Text Area (Long) to any type except Email, Phone, Text, Text Area, or URL\par
+(19). What is a dependent picklist?\par
+\endash  Dependent fields can help make your data more accurate and consistent by applying filters.\par
+\endash  A dependent field works in conjunction with a controlling field to filter its values. The value chosen in the controlling field affects the values available in the dependent field.\par
+\endash  300 is the maximum number of values allowed in a controlling picklist\par
+- A custom multi-select picklist cannot be the controlling field for a dependent field\par
+Field Type\tab Controlling Field\tab Dependent Field\par
+Standard Picklist\tab Yes\tab No\par
+Custom Picklist\tab Yes\tab Yes\par
+Custom Multi-Select\tab No\tab Yes\par
+Standard Checkbox\tab Yes\tab No\par
+Custom Checkbox\tab Yes\tab No\par
+(20). What is Page Layout and Record Types?\par
+Page Layout:\par
+\endash  How detail and edit pages are organized\par
+\endash  Page section customizations\par
+\endash  Which fields, related lists, and Custom Links a users sees\par
+\endash  Field properties \endash  visible, read-only and required\par
+Record Types:\par
+\endash  Allows you to define different sets of picklist values for both standard and custom picklists\par
+\endash  Record Types help you implement your custom business processes\par
+ \par
+(21). What is a Business Process?\par
+\bullet  Allows you to track separate sales, support, and lead lifecycles\par
+across different divisions, groups, or markets\par
+Available Business Processes:\par
+\endash  Sales Processes \endash  Create different sales processes that include some or all of the picklist values available for the Opportunity Stage field\par
+\endash  Support Processes \endash  Create different support processes that include some or all of the picklist values available for the Case Status field\par
+\endash  Lead Processes \endash  Create different lead processes that include some or all of the picklist values available for the Lead Status field\par
+\endash  Solution Processes \endash  Create different solution processes that include some or all of the picklist values available for the Solution Status field\par
+(22). What are the Objects available in the Salesforce Business Process and Give some Business Process Example?\par
+Lead\par
+Opportunity\par
+Case\par
+Solution\par
+\endash You must create the business process before creating record types for each of above objects.\par
+\endash  You can then associate each business process with one or more record types and make it available to users based on their profile.\par
+\endash  In order to implement more than one business process, multiple record types must also be implemented.\par
+Business Process Examples\par
+Lead Processes:\par
+\endash  Cold Call\par
+\endash  3rd Party telesales companies\par
+\endash  Leads generated via campaigns\par
+\endash  Leads generated via a registration form\par
+Opportunities Sales Processes:\par
+\endash  Miller Heiman/ Solution Selling Methodology\par
+\endash  Inside Sales vs. Outside Sales\par
+\endash  New business vs. Existing Business (Up selling)\par
+Case Processes:\par
+\endash  Customer Inquiries\par
+\endash  Internal Requests\par
+\endash  Billing inquiries\par
+Solutions Processes:\par
+\endash  Internal vs. Public Knowledge Base\par
+(23). What about Web-to-Lead and Web-to-Case?\par
+\endash A lead or case record created through Web-to-Lead or Web-to-Case will set the record type to that of  the default lead owner or automated case user (optional)\par
+(24). On which tabs can I create multiple record types?\par
+\endash Multiple record types may be created for every tab, with the exception of the Home, Forecasts, Documents, and Reports tabs.\par
+(25). What happens if I need to add a picklist value?\par
+\endash You will be prompted to select which record types should include the new value\par
+(26). What is Field-Level Security?\par
+\endash  Defines users\rquote  access to view and edit specific fields in the application\par
+(27). Why use Field-Level Security?\par
+\endash  Use Field-Level Security (rather than creating multiple page layouts) to enforce data security\par
+\endash  Users view data relevant to their job function Troubleshooting Tools\par
+\endash  Field accessibility views\par
+\endash  Setup | Administration Setup | Security Controls | Field Accessibility\par
+Notes:\par
+\bullet  Field Level Security is not available in PE\par
+\bullet  Field-level security cannot be used to make a field required. This is done from the Page Layout\par
+\bullet  Field access settings can be defined using both field-level security and page layouts. However, the most restrictive field access setting of the two will always apply. For example, if a field is required on the page layout, but read-only in the field-level security settings, the field will be read-only.\par
+\bullet  Hiding a field from a user using FLS also hides that field from list views, search results, and reports.\par
+(28).  What are Login Hours and Login IP Ranges?\par
+\endash  Sets the hours when users with a particular profile can use the system\par
+\endash  Sets the IP addresses from which users with a particular profile can log in\par
+Notes:\par
+\bullet  You can customize profiles to restrict users\rquote  ability to log in to Salesforce.\par
+\bullet  You can set the hours when users can log in and the IP addresses from which they can log in.\par
+If a user logs in before the restricted hours, the system will end the user\rquote s session when the restricted hours begin.\par
+Two Options for Restricting Access via IP Ranges\par
+Option 1: Add Trusted IP Ranges for your entire org\par
+Option 2: Add Trusted IP Ranges on a Profile by Profile basis\par
+for more info about {{\field{\*\fldinst{HYPERLINK http://theblogreaders.com/trusted-ip-ranges-in-salesforce/ }}{\fldrslt{http://theblogreaders.com/trusted-ip-ranges-in-salesforce/\ul0\cf0}}}}\f1\fs22\par
+(29).  What is a User Record?\par
+\endash  Key information about a user\par
+\endash  Each has its own unique username\par
+\endash  User logs in with username and password\par
+\endash  Users can be active or inactive; an active user uses a license\par
+\endash  Users are associated with a Profile\par
+\endash  Users are usually associated with a Role\par
+(30). What is a Record Owner?\par
+\endash  The user (or queue for Cases and Leads) who controls or has rights to that particular data record\par
+\endash  An Owner has the following special privileges:\par
+\bullet  View and edit capabilities\par
+\bullet  Transfer capability \endash  change ownership\par
+\bullet  Deletion capabilities\par
+\endash  Important assumption: Object permissions enabled\par
+\endash  The Account Owner, Opportunity Owners and Case Owners may or may not be the same user.\par
+\par
+31). What are Organization Wide Defaults?\par
+\endash  Defines the baseline level of access to data records for all users in the Organization (not including records owned by the user or inherited via role hierarchy)\par
+\endash  Used to restrict access to data\par
+Access levels:\par
+-Private\par
+-Public Read/Write\par
+-Public Read/Write/Transfer\par
+-Controlled by Parent\par
+-Public Read Only\par
+Field Level Security\par
+Organization Wide Defaults\par
+\par
+(32). What is a Role and Role Hierarchy?\par
+Role:\par
+\endash  Controls the level of visibility that users have to an organization\rquote s data\par
+\endash  A user may be associated to one role\par
+Role Hierarchy:\par
+\endash  Controls data visibility\par
+\endash  Controls record roll up \endash  forecasting and reporting\par
+\endash  Users inherit the special privileges of data owned by or shared with users below them in the hierarchy\par
+\endash  Not necessarily the company\rquote s organization chart\par
+Notes:\par
+\bullet  If using Customizable Forecasting, there is a separate forecast role hierarchy.\par
+\bullet  EE can create Account, Contact, Opportunity and Case Sharing Rules. PE can ONLY create Account and Contact Sharing Rules.\par
+\bullet  Assuming no sharing rules have been created, users in the same role cannot access one another\rquote s records.\par
+Example: Org Wide Default settings for opportunities are private. Creating a role and adding two users to that role does not allow those users access to one another\rquote s opportunities.\par
+\bullet  \ldblquote Grant Access Using Hierarchies\rdblquote  allows you to disable the default sharing access granted by your role and territory hierarchies. This option can be changed for custom objects that do not have their organization-wide default sharing setting set to Controlled by Parent.\par
+(33). What is Access at the Role Level?\par
+\endash  Defined when creating a role\par
+\endash  Level of access to Opportunities associated to Accounts owned by the role\par
+\endash  Level of access to Contacts associated to Accounts owned by the Role\par
+\endash  Level of access to Cases associated to Accounts owned by the role\par
+\endash  Level of access options depend on OWD\par
+Notes:\par
+\bullet  You can create up to 500 roles for your organization\par
+\bullet  Every user must be assigned to a role, or their data will not display in opportunity reports, forecast roll-ups, and other displays based on roles\par
+\bullet  All users that require visibility to the entire organization should belong to the highest level in the hierarchy\par
+\bullet  It is not necessary to create individual roles for each title at your company, rather you want to define a hierarchy of roles to control access of  information entered by users in lower level roles\par
+\bullet  When you change a user\rquote s role, any relevant sharing rules are evaluated to add or remove access as necessary\par
+(34). What is a Sharing Rule?\par
+\endash  Automated rules that grant access to groups of users\par
+\endash  Exceptions to Organization Wide Defaults\par
+\endash  Irrelevant for Public Read/Write organizations\par
+\endash  Levels of Access that can be granted\par
+\bullet  Read Only\par
+\bullet  Read/Write\par
+Notes:\par
+\bullet  Sharing rules should be used when a user or group of users needs access to records not granted them by either the role hierarchy setup or the organization wide default settings.\par
+- Sharing rules open up access whereas organization wide defaults restrict access.\par
+- You can use sharing rules to grant wider access to data. You cannot restrict access below your organization-wide default levels.\par
+\bullet  Sharing rules apply to all new and existing records owned by the specified role or group members.\par
+\bullet  Sharing rules apply to both active and inactive users.\par
+\bullet  When you change the access levels for a sharing rule, all existing records are automatically updated to reflect the new access levels.\par
+\bullet  When you delete a sharing rule, the sharing access created by that rule is automatically removed.\par
+\bullet  When you transfer records from one user to another, the sharing rules are reevaluated to add or remove access to the transferred records as  necessary.\par
+\bullet  When you modify which users are in a group or role, the sharing rules are reevaluated to add or remove access as necessary.\par
+\bullet  For contact, opportunity and case sharing rules, if the role or group members do not have access to the account associated with the shared contact, opportunity or case the rule automatically gives them access to view the account as well.\par
+\bullet  Managers in the role hierarchy are automatically granted the same access that users below them in the hierarchy have from a sharing rule.\par
+\bullet  You can edit the access levels for any sharing rule. You cannot change the specified groups or roles for the rule.\par
+(35). Types of Sharing Rules in Salesforce and Explain it?\par
+Account Sharing Rules:\par
+\endash  Based on who owns the account\par
+\endash  Set default sharing access for accounts and their associated cases, contacts, contracts, and opportunities\par
+Contact Sharing Rules:\par
+\endash  Based on who owns the contact (must be associated with an account)\par
+\endash  Set default sharing access for individual contacts and their associated accounts\par
+\endash  Cannot use with: Territory Management and B2I (Person Account) enabled orgs\par
+Opportunity Sharing Rules (EE/UE):\par
+\endash  Based on who owns the opportunity\par
+\endash  Set default sharing access for individual opportunities and their associated accounts\par
+Case Sharing Rules (EE/UE):\par
+\endash  Based on who owns the case\par
+\endash  Set default sharing access for individual cases and associated accounts\par
+Lead Sharing Rules (EE/UE):\par
+\endash  Based on who owns the lead\par
+\endash  Set default sharing access for individual leads\par
+Custom Object Sharing Rules (EE/UE):\par
+\endash  Based on who owns the custom object\par
+\endash  Set default sharing access for individual custom object records\par
+(36). Uses cases for Sharing Rules in salesforce?\par
+\endash  Organizations with organization-wide defaults of Public Read Only or Private can create sharing rules to give specific users access to data owned by other users.\par
+\endash  Cases Sharing Example: To use cases effectively, customer support users must have read access to accounts and contacts. You can create account sharing rules to give your customer support team access to accounts and contacts when working on cases.\par
+\endash  Account Sharing Example: The Western and Eastern Regional Directors need to see all of the accounts created by each others\rquote  sales reps. You can create two public groups \endash  one that includes the Western and Eastern Regional Director roles and one that includes the Western and Eastern Sales Rep roles. Then create an account sharing rule so that records owned by the Western and Eastern Sales Rep group are shared with the group containing the Western and Eastern Regional Director roles.\par
+(37). Best Practices of Creating Contact Sharing Rules?\par
+\endash  Account Org-Wide Default must be set to at least \ldblquote Public Read Only\rdblquote  in order to set the Contact Org-Wide Default to \ldblquote Public Read/Write\rdblquote .\par
+\endash  To share ALL contacts in the system with a group of users or a specific role, create a sharing rule that uses the \ldblquote All Internal Users\rdblquote  (or \ldblquote Entire Organization\rdblquote ) public group as the owned by option.\par
+\endash  Use \ldblquote Roles and Subordinates\rdblquote  over \ldblquote Roles\rdblquote  where possible to minimize the number of sharing rules.\par
+(38). What is a Public Group?\par
+\endash  A grouping of:\par
+\bullet  Users\par
+\bullet  Public Groups (nesting)\par
+\bullet  Roles\par
+\bullet  Roles and Subordinates\par
+\endash  Mixture of any of these elements\par
+\endash  Used in Sharing Rules \endash  for simplification (when more than a few roles need to be shared to)\par
+\endash  Also used when defining access to Folders and List Views\par
+For example, if a new user is assigned a role that belongs to an existing public group, that user will be\par
+automatically added to the public group\par
+(39). What is Manual Sharing?\par
+\endash  Granting record access, one-off basis\par
+\endash  Owner, anyone above owner in role hierarchy and administrator can manually share records\par
+\endash  Available on Contacts, Leads, Cases, Accounts and Opportunity records and Custom Objects\par
+\endash  Like sharing rules, irrelevant for Public Read/Write organizations\par
+(40). What is a Sales Team? (EE/UE)\par
+\endash  Used for collaborative selling\par
+\endash  Used for sharing as well as reporting purposes\par
+\endash  Ad hoc or may use Default Sales Team (defined for user)\par
+\endash  Default Sales Teams may be automatically added to a user\rquote s opportunities\par
+\endash  Who can add a Sales Team?\par
+\bullet  Owner\par
+\bullet  Anyone above owner in role hierarchy\par
+\bullet  Administrator\par
+Adding Default Sales Team Members:\par
+\endash  Click Setup | My Personal Information | Personal Information\par
+Please note that the Professional Edition does NOT have access to the Team Selling Feature.\par
+(41). Org Wide Defaults Vs Role Hierarchy Vs Sharing Models?\par
+Org Wide Defaults Vs Role Hierarchy Vs Sharing Models\par
+(42). What is an Account Team? (EE/UE)\par
+\endash  Used for collaborative account management\par
+\endash  Used for sharing as well as reporting purposes\par
+\endash  Manually added to Account records\par
+\endash  Default Account Teams may be automatically added to a user\rquote s accounts\par
+\endash  Who can add an account team?\par
+\bullet  Owner\par
+\bullet  Anyone above owner in role hierarchy\par
+\bullet  Administrator\par
+Please note that Account Teams are not available for Professional Edition.\par
+(43). What is an Case Team? (EE/UE)\par
+Case teams enable full communication and collaboration on solving customer issues. You can:\par
+\endash  Add teams of users to cases\par
+\endash  Create a workflow for case teams\par
+\endash  Predefine case teams for users\par
+\endash  Determine the level of access\par
+\endash  Administrators can predefine case teams for users and determine the level of access each team member has to a case, such as Read/Write or Read/Only.\par
+\endash  Click Path: Setup | Customize | Cases | Case Teams\par
+(44). What are Folders?\par
+\endash  Used for organizing email templates, documents, reports and dashboards\par
+\endash  Access is defined \endash  Read or Read/Write\par
+\endash  Access is explicit \endash  does NOT roll up through role hierarchy\par
+Notes:\par
+\endash  You can modify the contents of a folder if the folder access level is set to Read/Write.\par
+\endash  Only users with the \ldblquote Manage Public Documents\rdblquote  or \ldblquote Manage Public Templates\rdblquote  can delete or change a Read Only folder.\par
+\endash  The Documents tab does NOT contain version control capabilities\par
+\endash  To search documents, users must use Documents search. The sidebar search does NOT search Documents, Solutions, Products, and Reports but does search Assets and Custom Objects\par
+\endash  The Create New Folder link will only be visible to users with the \ldblquote Manage Public Documents\rdblquote  permission\par
+\endash  The size limit for documents uploaded is 5MB. The size limit for document filenames is 255 characters including the file extension\par
+(45). What is Workflow?\par
+Salesforce Workflow gives you the ability to automatically:\par
+\endash  Create and send email alerts\par
+\endash  Create and assign tasks\par
+\endash  Update field values to either specific values, or based on formulas\par
+\endash  Create and send outbound API messages\par
+\endash  Create and execute time-dependent actions\par
+Workflow Important Points:\par
+\bullet  Your sales organization operates more efficiently with standardized internal procedures and automated business processes \endash  workflow.\par
+\bullet  You can set up Salesforce to automatically send email alerts, assign tasks, or update field values based on your organization\rquote s workflow.\par
+\bullet  Workflow rules can be used to assign follow-up tasks to a support rep when a case is updated, send sales management an email alert when a sales rep qualifies a large deal, change the owner of a contract when it has been signed by the customer, or trigger an outbound API message to an external HR system to initiate the reimbursement process for an approved expense report.\par
+(46). What are Workflow Components available?\par
+Workflow consists of the following components:\par
+\endash  Workflow Rules \endash  trigger criteria for performing various workflow actions\par
+\endash  Workflow Tasks \endash  action that assigns a task to a targeted user\par
+\endash  Workflow Email Alerts \endash  action that sends an email to targeted recipients\par
+\endash  Workflow Field Updates \endash  action that updates the value of a field automatically\par
+\endash  Workflow Outbound Messages \endash  action that sends a secure configurable API message (in XML format) to a designated listener (not covered in this class)\par
+Notes:\par
+\bullet  Workflow Rules use workflow actions when their designated conditions are met. Workflow rules can be triggered any time a record is saved or created, depending on your rule settings. However, rules created after saving records do not trigger those records retroactively.\par
+\bullet  Workflow Tasks are like task templates, containing the information a workflow rule uses to assign a task to specified users whenever specific business actions trigger the rule. Workflow tasks provide the Subject, Status, Priority, and Due Date for the tasks a rule assigns.\par
+\bullet  Workflow Email Alerts are emails generated by a workflow rule using an email template. The emails are sent to designated recipients, either Salesforce users or others, whenever specific business actions trigger a workflow rule.\par
+\bullet  Workflow Field Updates specify the field you want updated and the new value for it. Depending on the type of field, you can choose to apply a specific value, make the value blank, or calculate a value based on a formula you create.\par
+\bullet  Workflow Outbound Messages send the information you specify to an endpoint you designate, such as an external service. An outbound message sends the data in the specified fields in the form of a SOAP message to the endpoint.\par
+(47). What is a Workflow Rule?\par
+\endash  Defined trigger criteria based on your business requirements\par
+\endash  Evaluated when record is created, when created/updated, OR when created/updated and did not previously meet trigger criteria\par
+\endash  When trigger criteria is met workflow actions, such as email alerts, tasks, field updates, or outbound messages are generated\par
+To get started using workflow rules, click\par
+\bullet  Setup | Create| Workflow & Approvals | Workflow Rules\par
+(48). What is a Workflow Task?\par
+\endash  When a Workflow Rule is met, a Task may be assigned to designated users to follow-up and respond to the Business Conditions in the Workflow Rule\par
+\endash  Workflow Tasks may be assigned to a user, role, record owner, record creator, sales team role, or account team\par
+\endash  Tracked in Activity History and can be reported on\par
+\endash  Can be re-used within the same object\par
+\endash  Tasks can be immediate or time-dependent\par
+To create your workflow tasks:\par
+Click Setup | Customize | Workflow & Approvals | Tasks\par
+(49). What is a Workflow Alert?\par
+\endash  Workflow Alerts are emails generated by a workflow rule whenever specific Business Actions trigger the rule\par
+\endash  Can send alerts to Users, Roles, Customer in a Contact Field, Email Field on Page Layout \endash  please see picklist for options\'85\par
+\endash  Not tracked in Activity History\par
+\endash  Can be re-used within the same object\par
+\endash  Alerts can be immediate or time-dependent\par
+(50). What is a Workflow Field Update?\par
+\endash  Field updates allow you to automatically change the value of a field to a value you specify\par
+\endash  Depending on the type of field you can:\par
+\bullet  apply a specific value\par
+\bullet  make the value blank\par
+\bullet  calculate a value based on a formula you create\par
+\endash  Field updates can be immediate or time-dependent\par
+To get started using workflow Filed Updates, click\par
+Click Setup | Create | Workflow & Approvals | Field Updates\par
+\par
+\par
+(51). What is Time-Dependent Workflow?\par
+Time-Dependent Workflow gives you the ability to\par
+\endash  execute time-sensitive actions before or after any date on the record\par
+\endash  perform a series of actions at various points in time\par
+\endash  use the Workflow Queue to manage all pending actions Use Time-Dependent workflow to\par
+\endash  send an email reminder to an account team if a high-value opportunity is still open ten days before the close date\par
+\endash  notify the VP of sales if a high value opportunity close date is fast approaching and it has not been closed\par
+\endash  pro-actively notify support rep if an open case with Platinum Support SLA has not been worked for a period of time and take action before the case  escalates\par
+(52). Working with Time-Dependent workflow\par
+Time Triggers\par
+\endash  are time values relevant to the record and are used to initiate a time-dependent action\par
+Time-Dependent Actions\par
+\endash  are any of the five workflow actions with an associated time-trigger\par
+\endash  are queued whenever a rule is triggered (see next page)\par
+\endash  can be reused in additional workflow rules as long as the object is the same\par
+\endash  are removed from the workflow queue if the corresponding record no longer meets rule trigger criteria.\par
+\endash  are dynamically updated in the workflow queue if the corresponding record field is updated.\par
+(53). Time-Dependent Workflow \endash  Considerations\par
+Maximum of 10 time triggers per rule\par
+Maximum of 40 actions (10 x 4 types) per time trigger, and 80 actions per workflow rule\par
+Workflow default user must be set up before creating time-based rules\par
+Precision limited to hours or days\par
+Cannot convert leads with time-dependent actions in the Workflow Queue\par
+Time triggers cannot be added to or removed from activated workflow rules\par
+Not possible to create a time-dependent action associated to a rule with a trigger type of Every time the record is created or updated\par
+(54). When The Add Time Trigger button is unavailable?\par
+The evaluation criteria is set to Evaluate the rule when a record is: created, and every time it\rquote s edited.\par
+The rule is activated.\par
+The rule is deactivated but has pending actions in the workflow queue.\par
+(55). Time-Dependent Workflow Limitations:\par
+Time triggers don\rquote t support minutes or seconds.\par
+Time triggers can\rquote t reference the following:\par
+DATE or DATETIME fields containing automatically derived functions, such as TODAY or NOW.\par
+Formula fields that include related-object merge fields.\par
+You can\rquote t add or remove time triggers if:\par
+The workflow rule is active.\par
+The workflow rule is deactivated but has pending actions in the queue.\par
+The workflow rule evaluation criteria is set to Evaluate the rule when a record is: created, and every time it\rquote s edited.\par
+The workflow rule is included in a package.\par
+(56). What is Approval Processing?\par
+An approval process is an automated Business Process that your organization can use to approve records in Salesforce\par
+An approval process specifies the:\par
+\endash  Steps necessary for a record to be approved\par
+\endash  Who must approve it at each step\par
+\endash  The actions to take when a record is approved, rejected, or first submitted for approval\par
+(57). Approval Terminology\par
+\bullet  Approval Request: An approval request is an email notifying the recipient that a record was submitted for approval and his or her approval is  requested.\par
+\bullet  Approval Steps: Approval steps assign approval requests to various users and define the chain of approval for a particular approval process.\par
+\endash  Each approval step specifies the attributes a record must have to advance to that approval step, the user who can approve requests for those records, and whether to allow the delegate of the approver to approve the requests.\par
+\endash  The first approval step in a process also specifies the action to take if a record does not advance to that step.\par
+\endash  Subsequent steps in the process also allow you to specify what happens if an approver rejects the request.\par
+\bullet  Assigned Approver: The assigned approver is the user responsible for approving an approval request.\par
+\bullet  Initial Submission Actions: are the actions that occur when a user first submits a record for approval.\par
+\endash  For example, an initial submission action can lock the record so that no users can edit it during the approval process.\par
+\endash  Initial submission actions can also include any approval actions such as assigning a task, sending an email, or updating a field.\par
+\bullet  Final Approval Actions: are the actions that occur when all approval requests for a record are approved.\par
+\endash  Final approval actions can include any approval actions such as email alerts, field updates, tasks, or outbound messages.\par
+\endash  For example, a final approval action can change the status to \ldblquote Approved\rdblquote  and send a notification email.\par
+\bullet  Final Rejection Actions: are the actions that occur when all approval requests for a record are rejected.\par
+\endash  Final rejection actions can include any approval actions such as email alerts, field updates, tasks, or outbound messages.\par
+\endash  For example, a final rejection action can change the status to \ldblquote Rejected\rdblquote , send a notification email, and unlock the record so that users can edit it before resubmitting.\par
+\bullet  Record Locking: is the process of preventing users from editing a record regardless of field-level security or sharing settings.\par
+\endash  Records that are pending approval are automatically locked by Salesforce.\par
+\endash  Users must have the \ldblquote Modify All Data\rdblquote  permission to edit locked records.\par
+\endash  The Initial Submission Actions, Final Approval Actions, and Final Rejection Actions related lists contain a record lock action that you can edit if necessary\par
+\bullet  Outbound Messages: send the information you specify to an endpoint you designate.\par
+\endash  You can set up workflow rules and approval processes to send outbound messages to an endpoint as a means of getting information to an external service.\par
+(58). Approval Process Checklist\par
+Use the following checklist to plan your approval process:\par
+\endash  Prepare an Approval Request Email\par
+\endash  Determine the Approval Request Sender\par
+\endash  Determine the Assigned Approver\par
+\endash  Determine the Delegated Approver\par
+\endash  Decide if your approval process needs a filter\par
+\endash  Decide initial submission actions\par
+\endash  Decide if users can approve requests from a wireless device\par
+\endash  Determine if users can edit records that are awaiting approval\par
+\endash  Decide if records should be auto-approved or rejected\par
+\endash  Determine how many levels your process has\par
+\endash  Determine the actions when an approval request is approved or rejected\par
+(59). Jump Start Wizard vs. Standard Wizard\par
+\endash  The Jump Start wizard creates a one-step approval process for you in just a few minutes\par
+\endash  The Standard Wizard is useful for complex approval processes.\par
+Jump Start Wizard\par
+\bullet  The jump start wizard is useful for simple approval processes with a single step.\par
+\bullet  Use the jump start wizard if you want to create an approval process quickly by allowing Salesforce to automatically choose some default options for you.\par
+Standard Wizard\par
+\bullet  The standard wizard is useful for complex approval processes.\par
+\bullet  Use it when you want to fine tune the steps in your approval process.\par
+\bullet  The standard wizard consists of a setup wizard that allows you to define your process and another setup wizard that allows you to define each step in the process.\par
+(60). Parallel Approval Routing\par
+\endash  Send approval requests to multiple approvers in a single step Wait for approval from all the approvers or wait for approval from any one\par
+\endash  Configure an approval step to request approval from any combination of multiple users and related users\par
+\endash  Configure 25 parallel approvers at each step\par
+\par
+(61). Data Validation Rules contain\par
+\endash  A Boolean formula or expression that evaluates the data in one or more fields to either \ldblquote True\rdblquote  or \ldblquote False\rdblquote\par
+\endash  A user defined error message that displays when the rule returns a value of \ldblquote True\rdblquote\par
+\endash  Data Validation Rules execute when\par
+\endash  A User Saves a Record\par
+\endash  Before records are imported\par
+\endash  Using the Force.com Data Loader and the Force.com API\par
+Data Validation Rules are enforced on Area Impact\par
+Supported Objects All except Forecasts & Territories\par
+Reporting & Dashboards No impact\par
+API Validation rules enforced via API\par
+Import & Data Loader Validation rules enforced via Import & Data Loader\par
+Lead Convert Validation Rules Enforced \endash  must be turned on in Org\par
+Record Merge Not enforced\par
+Offline & Outlook Editions Validation rules enforced when data is synchronized with server\par
+Salesforce Mobile Validation rules enforced when data is synchronized with server\par
+Web To Case\par
+Web To Lead\par
+Validation rules enforced but no feedback to user\par
+Admin notified of any errors\par
+Self Service Portal Validation rules enforced\par
+Apex Packaging Can be packaged\par
+(62). What is the Import Wizard?\par
+\endash  An easy-to-use multi-step wizard for importing new Accounts, Contacts, Leads, Custom Objects or Solutions\par
+\endash  Can be used for Account, Contact, Lead, Custom Objects or Solutions updates based on matching ID\par
+\endash  Contact and Leads may be updated based on matching email address\par
+\endash  Custom Objects or Solutions may be updated based on Custom\par
+Object names, Solutions titles, Salesforce ID or external ID\par
+What is a CSV file?\par
+\endash  File type required when using the Import Wizard\par
+\endash  Values are separated by commas and each row indicates a record of data\par
+What is a record of data?\par
+\endash  One unique unit of related information\par
+\endash  Row of data in a table or spreadsheet\par
+Standard users can import up to 500 account or contact records per session. Organization-wide imports\par
+(system administrators) are limited to 50,000 accounts, contacts, leads, custom objects, or solutions per\par
+session\par
+\bullet  During a lead import, you can choose to enable active or inactive assignment rules and/or trigger workflow rules as part of the import\par
+Import Wizard\par
+\endash  Only imports data. Object and fields must be created first.\par
+\endash  Only available for System Administrators\par
+\endash  Must load parent objects first if lookup fields are included\par
+\endash  Loading for multiple record types requires file chunking\par
+Affected Objects and Functions\par
+\endash  Custom Objects, Accounts, Solutions, Contacts, and Leads\par
+(63). What is External ID?\par
+\endash  Flag on any custom field of type Text, Number or Email\par
+\endash  Available on all objects that support custom fields\par
+\endash  Why is it important?\par
+\bullet  Increases Report and API SOQL performance\par
+\bullet  Allows customers to use the record ID from an external system like the salesforce ID in Import and the API (new \ldblquote Upsert\rdblquote  call)\par
+\endash  Import supports External ID field that can be used to load and/or synchronize data sourced in external systems\par
+\endash  Customer System of Record master exists in SAP with an SAP customer number. The External ID field may be used to maintain the SAP number\par
+\endash  Migrating large amounts of data, the External ID field may be used to track migration data and run data validation tests before going live\par
+Example of an External Id flow where the update or insert is determined based on an import flow from a\par
+system of record such as Oracle.\par
+\bullet  The value proposition here is that we can de-duplicate not only based on our IDs (which are unknown to an external system), but that we can flag an external id (of type text, email, or number) custom field for the purposes of helping to de-duplicate (ie. Update/Insert = Upsert) during the import process; especially when trying to keep multiple systems synchronized\par
+External ID\par
+\endash  Case INSENSITIVE\par
+\endash  Three ID fields per object\par
+\endash  Custom fields only\par
+(64). Force.com Data Loader \endash  Features\par
+\endash  An easy-to-use wizard interface\par
+\endash  An alternate command line interface\par
+\endash  A batch mode interface with database connectivity\par
+\endash  Support for large files with up to millions of rows\par
+\endash  Drag-and-drop field mapping\par
+\endash  Support for all objects, including custom objects\par
+\endash  Detailed success and error log files in CSV format\par
+\endash  A built-in CSV file viewer\par
+\endash  Platform independence, by virtue of being written in Java\f0\'ae\par
+Force.com Data Loader is an application for the bulk import or export of data.\par
+\f1\endash  Use it to insert, update, delete, or extract, or upsert Salesforce records.\par
+\endash  Force.com Data Loader can move data into or out of any salesforce.com object.\par
+(65). Use the Data Loader when:\par
+\endash  You need to load 50,000 or more records.\par
+\endash  You need to load into an object that is not yet supported by web-based importing.\par
+\endash  You want to schedule regular data loads, such as nightly imports.\par
+\endash  You want to be able to save multiple mapping files for later use.\par
+\endash  You want to export your data for backup purposes.\par
+\endash  Use web-based importing when:\par
+\endash  You are loading fewer than 50,000 records.\par
+\endash  The object you need to import is supported by the web-based import wizards.\par
+\endash  You want to prevent duplicates by uploading records according to account name and site, contact email address, or lead email address.\par
+(66). What is the Recycle Bin?\par
+\endash  Houses deleted data for approximately 30 days\par
+\endash  Data can be recovered during this time period\par
+\endash  Not counted against storage limit\par
+If your organization reaches its Recycle Bin limit, Salesforce automatically removes the oldest records if\par
+they have been in the Recycle Bin for at least two hours.\par
+\endash  You cannot delete a product that is used on an opportunity\par
+\endash  You cannot delete the Standard Price Book or a price book that is on an opportunity.\par
+(67). What is a Standard report and Custom Report?\par
+\endash  Out-of-the-box reports, e.g., Account and Contact Reports\par
+\endash  May be used as a starting point for Custom Reports\par
+\endash  May not be deleted or removed (folder can be hidden)\par
+What is a Custom report?\par
+\endash  Created with your specific criteria\par
+\endash  Saved in the My Personal Folder, Unfiled Public folder or custom folder but not in a Standard Folder\par
+\endash  May be edited or deleted\par
+\endash  Can be searched for in Custom Report search\par
+What is the Report Wizard?\par
+\endash  An easy-to-use, multi-step wizard used to create a custom report\par
+\endash  Number of wizard steps depends on Report Type selected\par
+(68). What is a Tabular Report?\par
+\endash  Provides a simple listing of your data without subtotals\par
+\endash  Examples: Contact mailing list report\par
+(69). What is a Summary Report?\par
+\endash  Provides a listing of data, like a Tabular Report, plus sorting and subtotaling of data\par
+\endash  Example: Report showing all opportunities for current FQ, grouped by Stage\par
+(70). What is a Matrix Report?\par
+\endash  Summarizes data in a grid against horizontal and vertical criteria\par
+\endash  Use this report type for comparing related totals\par
+\endash  Similar to a pivot table in Excel\par
+\endash  Example: Report showing all opportunities for your team for current FQ, subtotaled by Stage and Owner\par
+\par
+(71). What are Trend Reports?\par
+\endash  Report on opportunity history data by filtering on \ldblquote as of\rdblquote  date\par
+\endash  Only monthly \ldblquote as of\rdblquote  dates \endash  displays the report monthly within the interval selected\par
+\endash  Example: Interval = Current FQ will display 10/1/07, 11/1/07, 12/1/07\par
+(72). What are Charts?\par
+\endash  Graphical representation of data of a single Summary or Matrix Report\par
+\endash  Types: Horizontal Bar, Vertical Bar, Line and Pie\par
+\endash  \ldblquote Grouped\rdblquote  or \ldblquote Stacked\rdblquote  charts can be created from Summary reports & Matrix reports\par
+(73). What are Relative Dates?\par
+\endash  Used in Views and Reports for filtering\par
+\endash  Dynamic date range, based on current date\par
+\endash  Examples: This Week, Next Month, Last 90 Days\par
+Available Relative Date Filters (not case sensitive):\par
+\bullet  Today\par
+\bullet  Yesterday\par
+\bullet  Tomorrow\par
+\bullet  This Week\par
+\bullet  Last Week\par
+\bullet  Next Week\par
+\bullet  This Month\par
+\bullet  Last Month\par
+\bullet  Next Month\par
+\bullet  Last x Days\par
+\bullet  Next x Days\par
+\bullet  Quarter\par
+\bullet  Year\par
+\bullet  Fiscal Quarter\par
+\bullet  Fiscal Year\par
+(74). What are Custom Report Types?\par
+\endash  Custom report types allow you to build a framework in the report wizard from which users can create and customize reports.\par
+\endash  You build custom report types off of the relationships (masterdetail and lookup) between objects so that you can:\par
+\bullet  Choose which standard and custom objects to display to users creating and customizing reports\par
+\bullet  Define the relationships between objects displayed to users creating and customizing reports\par
+\bullet  Select which objects\rquote  fields can be used as columns in reports\par
+\endash  Define custom report types to display results from an object with or without its related objects\par
+\bullet  See which cases were closed with solutions, and which were not.\par
+(75). What is Conditional Highlighting?\par
+\endash  Set thresholds for report analysis\par
+\endash  3 conditions maximum per report\par
+\endash  Only apply to summary rows\par
+\endash  Numerical analysis only\par
+\endash  First condition is <; second condition <, third condition >=\par
+\bullet  You can use conditional highlighting for summary and matrix reports.\par
+\bullet  On the Select Chart and Highlights page of the report wizard, you can choose up to three number ranges and colors to conditionally highlight summary data in your report cells.\par
+\bullet  If you do not want to highlight a particular range, choose White as the color for that conditional highlighting\par
+(76). What are Dashboards?\par
+\endash  Visual representations of key business information\par
+\endash  Show information from multiple reports\par
+\endash  Made up of Components\par
+\endash  Use Custom Reports as source (Matrix and Summary)\par
+\endash  Running User determines the level of access to the Dashboard Data\par
+\endash  Refresh can be Scheduled\par
+\endash  Email a Dashboard\par
+(77). Dashboard Components\par
+Chart: Graphical representation of report results\par
+Table: A listing of the top or bottom records from a report\par
+Metric: A single data value \endash  drawn from the Grand Total of a report\par
+Gauge: A single data value \endash  displayed as a point on a defined spectrum \endash  drawn from the Grand Total of a report\par
+(78). What is a Campaign?\par
+\endash  Specific marketing program or marketing tactic\par
+\endash  Builds awareness and generates leads\par
+What is a Campaign Member?\par
+\endash  Lead or contact, who is associated to the Campaign\par
+\endash  Individual who has responded to Campaign\par
+Who has access to Campaigns?\par
+\bullet  Any user in your organization can view campaigns, view the advanced campaign setup, or run campaign reports.\par
+\bullet  However, only designated Marketing Users with the appropriate user permissions can create, edit, and delete campaigns and configure advanced campaign setup.\par
+\bullet  An administrator must select the Marketing User checkbox on a user\rquote s personal information to designate that user as a Marketing User.\par
+\bullet  In addition, Marketing Users can import leads and use the campaign import wizards if they also have the Marketing User profile (or the \ldblquote Import Leads\rdblquote  permission and \ldblquote Edit\rdblquote  on campaigns).\par
+\bullet  Campaigns are included with Enterprise, Unlimited, and Developer Editions, and available for an additional cost with Professional Edition\par
+(79). What is a Lead?\par
+\endash  Prospect that you want to market to\par
+\endash  Captures business card information\par
+\endash  Individual who has expressed interest in your product or service\par
+\endash  Assigned ownership either manually or via Assignment Rule\par
+What is a Contact?\par
+\endash  Individual who is associated to an Account\par
+Lead Conversion\par
+\endash  Lead qualification depends on your business process\par
+\endash  Lead information is mapped to the appropriate business object \endash  Account, Contact or Opportunity\par
+\endash  Existing data check\par
+The system automatically maps standard lead fields to standard account, contact, and opportunity fields\par
+\bullet  For custom lead fields, your administrator can specify how they map to custom account, contact, and opportunity fields\par
+\bullet  The system assigns the default picklist values for the account, contact, and opportunity when mapping any standard lead picklist fields that are blank. If your organization uses record types, blank values are replaced with the default picklist values of the new record owner.\par
+\bullet  If the lead has a record type, the default record type of the new owner is assigned to records created during lead conversion.\par
+What is a Web-to-Lead?\par
+\endash  An online form to capture lead information\par
+\endash  Published on your web site\par
+What is an Email Template?\par
+\endash  Standardized text or HTML\par
+\endash  Enables standard and consistent email messaging\par
+What is an Auto-Response Rule?\par
+\endash  Determines which Email Template to send to leads generated via Web-to-Lead\par
+\endash  Contains Rule Entries that determine criteria for determining Email Template response content\par
+(80). What is a Case?\par
+\endash  A logged issue or problem\par
+\bullet  Similar Cases may be grouped using a Hierarchy\par
+\endash  Cases are:\par
+\bullet  Manually entered from a phone call or an email\par
+\bullet  Automatically create Case from an email (Emailto- Case)\par
+\bullet  Automatically captured:\par
+\endash  Web site (Web-to-Case)\par
+\endash  Create a Case functionality in Outlook Edition\par
+\endash  May be assigned either manually or automatically via Assignment Rules\par
+\endash  Associated to Contacts and Accounts\par
+What is a Case Queue?\par
+\endash  A virtual storage bin that can be used to group cases based on criteria such as skill requirements, product categories, customer\par
+types, or service levels\par
+\endash  Users have visibility into the Case Queues to which they are members\par
+\endash  Cases remain in the Queue until they are assigned to or taken by individual users\par
+What is a Case Assignment Rule?\par
+\endash  Determines how Cases are automatically routed to User or Queue\par
+\endash  Contains Rule Entries, pre-defined business rules, that determine Case routing\par
+What is Web-to-Case?\par
+\endash  A web form that is published to a web site\par
+\endash  Customers use to submit inquiries online\par
+What is Email-to-Case?\par
+\endash  Automatically create a case when an email is sent to one of your\par
+company\rquote s email addresses, such as support@theblogreaders.com\par
+What are Auto-Response Rules?\par
+\endash  Determines which Email Template to send to cases generated via Web-to-Case\par
+\endash  Contains Rule Entries that determine criteria for determining Email Template response content\par
+What is an Escalation Rule?\par
+\endash  Automatically escalates an unresolved Case within a certain period of time (age over)\par
+\endash  Based on pre-defined business criteria\par
+What are Business Hours?\par
+\endash  Set the organization\rquote s hours of operation\par
+\endash  Escalation Rule uses to determine when to escalate a Case\par
+\endash  Include business hours in multiple time zones.\par
+\endash  Associate cases with specific time zones\par
+\endash  Escalate cases according to specific time zones\par
+\par
+(81). What is a Solution?\par
+\endash  An answer to a common question or problem\par
+\endash  Enables Customer Support users get up to speed quickly\par
+\endash  Enables Support teams to answer questions quickly and consistently\par
+\endash  Customers search for and browse published Solutions to selfassist\par
+\endash  Content-Rich Solutions are an enhancement to the Solution Object which allows solution writers to integrate rich text and\par
+images into their solutions to completely solve a problem\par
+What is a Category?\par
+\endash  Mechanism to organize Solutions\par
+\endash  Solutions may be associated to one or more Categories\par
+\endash  Categories make up a Solution Category tree structure\par
+What are Suggested Solutions?\par
+\endash  The suggested solutions feature displays up to ten relevant solutions that may help users and customers solve a particular case from the case detail page and the Self-Service portal.\par
+\bullet  Suggested Solutions can be enabled for the following:\par
+Cases tab\par
+Self Service Portal\par
+Case auto-response rules and emails\par
+(82). What is the Self-Service Portal?\par
+\endash  Authenticated portal\par
+\endash  Provides 24/7 online support\par
+\endash  Contains Public Knowledge Base, Suggested Solutions and Web-to-Case functionality\par
+(83). What is the AppExchange?\par
+\endash  A Website Owned and Operated by salesforce.com\par
+\endash  Enables Partners and Customers to Download & Install\par
+\bullet  Custom Apps\par
+\bullet  Components\par
+\endash  Dashboards, Reports,\par
+\endash  Documents, Profiles,\par
+\endash  S-Controls\'85\par
+\endash  Public & Private Sharing\par
+\endash  Free to Post and Download\par
+\bullet  Partners May Charge for Services\par
+(84). Difference between Force.com IDE and Sandbox?\par
+The Force.com IDE is a powerful client application for creating, modifying, testing and deploying Force.com applications. Based on the Eclipse platform, it provides a comfortable environment for programmers familiar with integrated development environments, allowing you to code, compile, test, and deploy all from within the IDE itself.\par
+Sandbox\par
+Developer Edition\par
+The salesforce.com Sandbox environment is an exact copy of your salesforce.com instance.\tab Developer Edition was an edition created for development of integrations and apps, specifically for the AppExchange.\par
+You can copy your live instance to a sandbox environment.\tab You have to perform manually from sandbox to developer edition.\par
+You can either copy your configuration and data into a sandbox environment or just the configuration.\tab You cannot copy your configuration or data onto the Developer Edition, but you can customize it to match your instance\rquote s look and feel.\par
+(85). What is Roll up summary field in Salesforce?\par
+Roll up summary field in salesforce calculates the Count, Sum, Min or Max of particular field of any child record. Thus, we can say that Roll up summary field can only be created on Master object.\par
+(86). How many types of the relationship fields available in Salesforce?\par
+There are Four types of the Relationship fields available in Salesforce\par
+1. Master Detail\par
+2. Many to Many\par
+3. Lookup\par
+4. Hierarchical (It is only available on User Object, we cannot create this relationship to other SFDC Objects)\par
+(87). What will happen if the Account is deleted?\par
+If the Account is deleted then Contact, Opportunity will also be deleted from Salesforce.\par
+Contact and Opportunity are related to that Account.\par
+(88). What are the types of email templates available in salesforce.com?\par
+1. Text\par
+2. HTML with Letter Head\par
+3. Custom HTML\par
+4. Visual force\par
+You can create four different types of email templates:\par
+1) Text \endash  All users can create or change text email templates. See Creating Text Email Templates.\par
+2) HTML with letterhead \endash  Administrators and users with the \ldblquote Edit HTML Templates\rdblquote  permission can create HTML email templates based on a letterhead. See Creating HTML Email Templates.\par
+3) Custom HTML \endash  Administrators and users with the \ldblquote Edit HTML Templates\rdblquote  permission can create custom HTML email templates without using a letterhead. You must either know HTML or obtain the HTML code to insert in your email template. See Creating Custom HTML Email Templates.\par
+4) Visualforce \endash  Administrators and developers can create templates using Visualforce. Visualforce email templates allow for advanced merging with a recipient\rquote s data, where the content of a template can contain information from multiple records, see Creating Visualforce Email Templates.\par
+(89).Sequence of Salesforce Triggers and Order of Execution\par
+The following is the order of salesforce execution when the you create or update a record,\par
+1) Loads the original record from the database or initializes the record for an upsert statement.\par
+2) Loads the new record field values from the request and overwrites the old values.\par
+If the request came from a standard UI edit page, Salesforce runs system validation to check the record for:\par
+Required values at the layout level and field-definition level\par
+Valid field formats (ex: zip code, country code format)\par
+Maximum field length (ex: mobile number must 10 digits)\par
+Salesforce doesn\rquote t perform system validation in this step when the request comes from other sources, such as an Apex application or a SOAP API call.\par
+3) Run all before triggers.\par
+4) Runs most system validation steps again, such as verifying that all required fields have a non-null value, and runs any user-defined validation rules. The only system validation that Salesforce doesn\rquote t run a second time (when the request comes from a standard UI edit page) is the enforcement of layout-specific rules.\par
+5) Saves the record to the database, but doesn\rquote t commit yet.\par
+6) Run all after triggers.\par
+7) Run assignment rules.\par
+8) Run auto-response rules.\par
+9) Run workflow rules.\par
+10) If there are workflow field updates, updates the record again.\par
+11) If the record was updated with workflow field updates, fires before and after triggers one more time (and only one more time), in addition to standard validations. Custom validation rules are not run again.\par
+12) Run escalation rules.\par
+13) If the record contains a roll-up summary field or is part of a cross-object workflow, performs calculations and updates the roll-up summary field in the parent record. Parent record goes through save procedure.\par
+14) If the parent record is updated, and a grand-parent record contains a roll-up summary field or is part of a cross-object workflow, performs calculations and updates the roll-up summary field in the parent record. Grand-parent record goes through save procedure.\par
+15) Run Criteria Based Sharing evaluation.\par
+16) Commits all DML operations to the database.\par
+17) Run post-commit logic, such as sending email.\par
+(90). How to delete the User from Salesforce?\par
+salesforce does not allow to delete any user, however you can deactivate the users.\par
+You can delete delete the Users Data using Mass Delete Record\par
+Setup-> Administration Setup-> Data Management-> Mass Delete Record, from there select the objects like Account, Contact, Cases, Opportunity, Product etc and in criteria select the users name and delete all records of that user related data in the curresponding object.\par
+\par
+(91). How to restrict the user to see any record, lets say CASES?\par
+set up cases sharing to be private.  If both users are admins or have view all records on cases, then that overrides private sharing.\par
+(92).What is difference between WhoId and WhatId in the SFDC Data Model of Task/Events ?\par
+WhoID \endash  Lead ID or a Contact ID\par
+WhatID \endash  Account ID or an Opportunity ID or Custom Object ID\par
+(93). What is Master Detail relationship and look up relationship in Salesforce?\par
+Master Detail relationship is the Parent child relationship. In which Master represents Parent and detail represents Child. If Parent is deleted then Child also gets deleted. Rollup summary fields can only be created on Master records which will calculate the SUM, AVG, MIN of the Child records.\par
+Look up relationship is something like \ldblquote has-a\rdblquote  (Containership) relationship. Where one record has reference to other records. When one record is deleted then there is no impact on other records.\par
+(94). Can we convert the lookup relationship to Master Detail relationship?\par
+Yes, We can convert the lookup relationship to master detail relationship only if all the existing record has valid lookup field values.\par
+(95). Can we create Master Detail relationship on existing records?\par
+No. first we have to create the lookup relationship then populate the value on all existing record and then convert it.\par
+(96). In How many way we can invoke the Apex class?\par
+1. Visualforce page\par
+2. Trigger\par
+3. Web Services\par
+4. Email Services\par
+(96). What is the custom settings?\par
+Custom settings are similar to custom objects and enable application developers to create custom sets of data, as well as create and associate custom data for an organization, profile, or specific user. All custom settings data is exposed in the application cache, which enables efficient access without the cost of repeated queries to the database. This data can then be used by formula fields, validation rules, Apex, and the Web services API.\par
+(97). Types of the custom settings?\par
+List Custom Settings:\par
+A type of custom setting that provides a reusable set of static data that can be accessed across your organization. If you use a particular set of data frequently within your application, putting that data in a list custom setting streamlines access to it. Data in list settings does not vary with profile or user, but is available organization-wide. Examples of list data include two-letter state abbreviations, international dialing prefixes, and catalog numbers for products. Because the data is cached, access is low-cost and efficient: you don\rquote t have to use SOQL queries that count against your governor limits.\par
+Hierarchy Custom Settings:\par
+A type of custom setting that uses a built-in hierarchical logic that lets you \ldblquote personalize\rdblquote  settings for specific profiles or users. The hierarchy logic checks the organization, profile, and user settings for the current user and returns the most specific, or \ldblquote lowest,\rdblquote  value. In the hierarchy, settings for an organization are overridden by profile settings, which, in turn, are overridden by user settings.\f0\par
+}
+ 
