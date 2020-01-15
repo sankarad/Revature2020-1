@@ -1,0 +1,172 @@
+Question 1. Explain What Is A Custom Object In Sales Force?
+
+Answer :
+
+Custom objects are nothing but database tables. It stores data related to your company in Salesforce.com. Once you have defined custom object you can do following things like
+
+Create custom fields
+Associate the custom object with other records
+In custom related lists, it display the custom object data
+For custom object, records track events and tasks
+Build page layouts
+For the custom object create a custom tab
+To analyze custom object data create dashboards and reports
+Share your custom tabs, custom apps, custom objects and any other related components
+
+ Mention How Many Relationship Is Included In Sfdc And What Are They?
+
+Answer :
+
+There are two types of relationships
+
+Master detail relationship
+Lookup relationship
+
+Mention What Are The Three Types Of Object Relations In Salesforce?
+
+Answer :
+
+Different types of object relations in Salesforce includes
+
+One to many
+Many to many
+Master detail
+
+ Explain What The Junction Object Is And What Is The Use?
+
+Answer :
+
+Junction objects are used to build many-to-many relationships between objects.  You can take a recruiting application example, where a position for a job can be linked to many candidates and in the same manner a candidate can be linked to the different positions. So, to connect this data model, you need a third party object, this object is referred as junction object.  Here “job application” is the junction object.
+
+When Should You Build Solutions Declaratively Instead Of With Code?
+
+Answer :
+
+As a salesforce best practice, if something can be done using Configurations (Declarative) then its preferred over coding. The declarative framework is optimized for the platform and is always preffered.
+
+
+What does a lead get converted to in salesforce sales cloud
+Account
+Campaign
+Opportunity
+Contact
+Cases
+
+Can a formula field be updatable via layouts
+Yes
+No
+
+How will you setup a validation rules to update field values
+via process builder
+via automation manager
+not a feature of salesforce
+
+Can you prevent a delete of record using validation rules
+YEs
+No
+
+
+Which of the following are true
+
+User cann have multirple profiles and permission sets
+User can have single profile 
+User can have multiple roles
+Roles can be assigned to profiles
+
+USer is unable to see a record of a an object to which his profile has access .What are the possible reasons?
+User is not have correct role
+User is having role but no access to objects
+User role is out of scope in hierarchy and OWD of object is set to private
+USer role is not assigned the correct profile
+
+
+Where can sys admin assign page layout
+profile
+role
+record type
+Org Level
+
+Which of the following is true?
+
+Custom field can be controller field in hierarchical picklist
+Standard field can be controller field in  hierarchical picklist
+any field can be controller field in hierarchchical picklist
+
+
+Field can be made readonly at ?
+
+Field level only
+Page layout level
+
+Field is read only,but user is still able to make changes to this ,what is the possible 
+reason,which property of profile needs to be checked.
+
+
+Update read only fields
+Edit read only fields
+View all modify all
+
+ How To Create Roll-up Summary Field On Lookup Relation?
+
+Answer :
+
+Not possible. Roll-up summary is enabled for only Master —Detail relationship.
+
+
+What Is Permission Set?
+
+Answer :
+
+Permission sets extend users functional access without changing users profile.
+
+Lx: A user has only read access through profile on custoni object. administrator want to give access Edit and create operations to him without changing the profile. Administrator creates the permission set having edit and creates operation on custom object and assign to that user.
+
+
+Explain view all modify all permission in a profile and how they affect records access
+
+Which affects records access - choose all that apply
+Profiles
+Roles
+OWD
+Permission sets
+
+
+How Many Ways We Can Made Field Is Required?
+
+Answer :
+
+While creation of field
+Validation rules
+Page Layout level
+
+What are the different type of OWD settings - 
+Private
+Public read write
+Modify all
+Public Read only
+Public delete
+
+What are types of sharing
+Manual
+Criteria based
+Apex
+Permission based
+
+Are sharing rules retroactive
+Yes
+No
+
+Are validation rule
+REtroactive
+YEs
+No
+
+Validation rules exists on master detail objects (both) and also has a rollup summary,which validation 
+will fire if the child object is updated which affects the roll up
+All validation fire
+Wrong configuration
+Only child validation will fire
+Only parent validation will fire
+
+
+
