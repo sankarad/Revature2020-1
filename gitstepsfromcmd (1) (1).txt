@@ -1,0 +1,10 @@
+create dir
+git init 
+git clone remoteurl
+git remote add name url
+chang file/create file
+git config --global user.email "ramnarayananrr@yahoo.com"f
+git add * or file name
+git commit -m "message"
+git push -u or -f remote origin
+or git push
