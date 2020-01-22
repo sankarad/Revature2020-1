@@ -1,0 +1,47 @@
+public with sharing  class Revatureapex1 {
+    
+    
+    private  double val1  =0;
+    
+    public void updateval1(Integer x){
+        
+        val1=x;
+    }
+    
+    public double getval1(){
+        
+        return this.val1;
+    }
+    
+    public void method1(){
+        
+        String[] arr1 = new list<string>();
+        List<String> strlist = new list<string>();
+        strlist.add('Monday');
+        strlist.add('Tuesday');
+        strlist.add('Wednesday');
+        strlist.add('Thursday');
+        System.debug(strlist);
+        System.debug(strlist[2]);
+        for (String x:strlist){
+            system.debug(x);
+        }
+    }    
+    
+    public void method2(){
+        
+        map<Integer,string> mapofdays = new map<Integer,string>();        
+        mapofdays.put(1,'Monday');
+        mapofdays.put(2,'Tuesday');
+        mapofdays.put(3,'Wednesday');        
+        mapofdays.put(4,'Thursday');
+        system.debug(mapofdays);
+        
+        for(String x:mapofdays.values()){
+            
+            system.debug(x);
+        }
+        
+    }
+    
+}
