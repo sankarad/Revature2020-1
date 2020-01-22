@@ -1,0 +1,41 @@
+system.debug('Hello reston development team');
+system.debug(Integer.valueOf('5'));
+double num1  = 10.10;
+double  num2 =0;
+num2 = num1+7000 /100;
+system.debug('Hello reston development team ,current count is  :' + num2);
+system.debug(Math.mod(12,5));
+system.
+for (integer ay =1; ay<10;ay++)
+{
+}
+integer ax =0;
+//also try while
+/*
+multi line
+*/
+do{
+    
+    system.debug('value of \r'+ ax );
+    ax++;
+} while(ax  < 10);
+
+
+String[] arr1 = new list<string>();
+
+List<String> strlist = new list<string>();
+strlist.add('Monday');
+strlist.add('Tuesday');
+strlist.add('Wednesday');
+strlist.add('Thursday');
+System.debug(strlist);
+System.debug(strlist[2]);
+/*for(integer x=0;x<4;x++){
+   System.debug('priting individual itesm from list'+strlist[x]); 
+    
+}*/
+
+for (String x:strlist){
+    
+    system.debug(x);
+}
