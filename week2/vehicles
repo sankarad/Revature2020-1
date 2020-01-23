@@ -1,0 +1,29 @@
+public abstract class Vehicles {
+    
+     public integer wheels;
+     public integer seats;
+     public integer doors;
+    public Vehicles(){
+        
+        system.debug('spr cls ');
+    }
+    public void setup1(integer x,integer y,integer z)
+    {
+       
+        this.wheels =x;
+        this.seats =y;
+        this.doors =z;
+        
+        
+   }
+    
+     public void setup2(integer x,integer y)
+     {
+       
+        this.wheels =x;
+        this.seats =y;
+     
+    }
+    
+
+}
