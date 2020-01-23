@@ -1,0 +1,17 @@
+Please read the documenation for the following topics in detail for upcoming QC and quizzes and one on ones,
+
+Class /structure/access modifiers
+object ofclass
+Abstraction and information hiding using access modifiers
+constants
+If-Else, Do-While, While, For.
+if else and else if 
+apex is also data focused
+syntax for creating arrays,sobjects lists ,maps
+enums
+encapsulation is bundling of data /metods and restricing access at times
+block scoping of variables
+developer console capabilities and tabs
+
+SOQL
+SOSL
