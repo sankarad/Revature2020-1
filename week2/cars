@@ -1,0 +1,22 @@
+public class Car extends vehicles {
+    
+   public  Car(){
+        super();
+        system.debug('from constructor');
+        
+    }
+    
+    public Car(Integer x ,Integer y){
+        system.debug('from second class constructor');
+        
+    }
+    
+    public void method1(){
+        
+       this.setup1(4,4,4);
+        
+        System.debug('new car setup with wheels,doors,searts'+this.wheels );
+    }
+ 
+    
+}
