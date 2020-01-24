@@ -1,0 +1,48 @@
+SAvepoint sp = Database.setSavepoint();
+account ac= new account();
+ac = [select id,rating,phone from account where name ='revature university'];
+ac.rating ='Warm';
+ac.phone = '2222';
+update ac;
+/////
+database.rollback(sp);
+
+
+
+
+
+
+
+
+
+account ac= new account();
+ac = [select id,rating,phone from account where name ='revature university'];
+ac.rating ='Hot';
+ac.phone = '1111111111';
+update ac;
+
+//update record on contact object
+
+List<contact> contlist = new list<contact>();
+
+contlist = [select id ,name from  ];
+
+delete contllist;
+
+List<contact> contlist = new list<contact>();
+
+contact cont;
+Integer  x =0;
+while (x<4){
+    cont = new contact();
+    cont.lastname ='jerry'+x;
+    if(x == 2){
+        cont.lastname ='';
+    }
+   // insert cont;
+    
+    contlist.add(cont);
+    x++;
+}
+
+database.insert(contlist,false);
