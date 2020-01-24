@@ -1,0 +1,13 @@
+Database.saveResult[] rslt=Database.update(upcon, false);
+        for(Database.saveResult r: rslt){
+            if(r.isSuccess()){
+                System.debug(r.getId());
+            }
+            else{
+                  for(Database.Error err : r.getErrors()){
+                    System.debug('The following error has occurred.');                    
+                    System.debug(err.getStatusCode() + ': ' + err.getMessage());
+                    System.debug('Contact fields that affected this error: ' + err.getFields());
+                }
+            }
+        }
