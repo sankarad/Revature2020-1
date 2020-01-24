@@ -1,0 +1,286 @@
+PD1 practise questions
+
+Apex and soql - 
+ Introduction to Apex
+ What is Apex?
+		Apex is a hosted object oriented, strongly typed language that uses java-like syntax. It is a proprietary language developed and used by salesforce.
+
+ Classes
+ What is a class?
+		A class is a template or blueprint from which objects are created.
+
+ Objects
+ What is an object?
+		An object is an instance of a class.
+
+Basic Concepts 
+ Enums
+ What is an Enum?
+		An enum is an abstract data type with values that each take on exactly one of a finite set of identifiers that you specify.
+
+ Rules of Conversion
+ What is explicit conversion?
+		In general, Apex requires you to explicitly convert one data type to another. For example, a variable of the Integer data type cannot be implicitly converted to a String. You must use the string.format method.
+		
+ What is implicit conversion?
+		Numbers form a hierarchy of types. Variables of lower numeric types can always be assigned to higher types without explicit conversion. The following is the hierarchy for numbers, from lowest to highest:
+			Integer
+			Long
+			Double
+			Decimal
+
+ Static & Instance Keywords
+ What does static mean?
+		Static means that the method or variable belongs to the class instead of the object.
+		Apex classes cannot be static.
+		Static methods, variables, and initialization code have these characteristics.
+			They’re associated with a class.
+			They’re allowed only in outer classes.
+			They’re initialized only when a class is loaded.
+			They aren’t transmitted as part of the view state for a Visualforce page.
+
+ Encapsulation
+ What is encapsulation?
+		Encapsulation is one of the pillars of OOP, it refers to the wrapping of states and behaviors inside of a class. We also use this to restrict access to those variables and methods, making use of access modifiers along with getters and setters. 
+
+ Access Modifiers
+ What are the access modifiers in Apex?
+		Private
+		Protected
+		Public
+		Global
+
+ What is the difference between public and global?
+		Global is available throughout an org, public is limited to its own namespace.
+
+ What is the difference between private and protected?
+		Private is only accessible inside the class it was declared in, whereas protected is available in both the class, any inner classes, and classes which extend the class.
+	
+ Properties
+ In Apex, what are properties?
+		Properties are like variables, but come with their own getter and setter methods. They can be read, read-write, or write-only. Whic the get and set methods are left unmodified they are called automatic properties.
+
+ Abstraction
+ What is Abstraction?
+		Abstraction is one of the pillars of OOP, primarily it deals with hiding the unneeded complexity from the user. Just as you do not need to know the details of an internal combustion engine to drive a car, you do not need to know the complex details of some abstracted data to build on top of it.
+
+ Abstract Class
+ What is an abstract class?
+		An abstract class is a class that contains at least one abstract method and is declared with the abstract keyword. Abstract classes cannot be instantiated, and any child class must provide inplmentation of the abstract methods.
+
+ How do we make a class abstract?
+		We declare it with the abstract keyword following the access modifier.
+		public abstract class ClassName {
+		}
+
+ Can we instantiate an abstract class?
+		No.
+
+ Interfaces
+ What is an interface?
+		An interface serves as contract between the class implementing and the interface itself. The interface provides the signatures and the class provides the implementation.
+
+ Inheritance
+ What is inheritance?
+		Inheritance is the process through which you can derive a class from another class, sharing the states and behaviors of the parent class to its children. We can use this to have shared common functionality while then extending the functionality for the specific needs of the child.
+		Common examples include vehicles or animals.
+
+ Extends & Implements Keywords
+ How do we inherit a class?
+		A class extends another class in the class declaration. The class being extended must be declared virtual or abstract, as by default classes are final.
+		public class Child extends Parent {}
+
+ How do we use an interface?
+		A class implements an interface in the class declaration. The class must then provide implmentation of the method signatures provided by the interface.
+		public class ClassName implements Interface {}
+
+ Polymorphism
+ What is polymorphism?
+		Polymorphism is the process through which constructs of different types are accessed through the same identifier. This comes in two types in Apex, overloading and overriding.
+
+ Overloading & Overriding
+ What is method overloading?
+		Overloading involves creating multiple methods of identical name, but with distinct signatures. 
+		public exampleconstructor() {}
+		public exampleconstructor(Integer num) {}
+
+ What is method overriding?
+		Overriding is used in cases where a developer wants to create a different implementation of a virtual method that belongs to its parent. This is possible through the use of the override keyword in the method declaration.
+		public virtual class ExampleParent {
+			public virtual void ExampleMethod() {
+				//logic
+			}
+		}
+		public class ExampleChild extends ExmapleParent {
+			public override void ExampleMethod(){
+				//different logic
+			}
+		}
+
+ Virtual Keyword
+ What is a virtual class/method?
+		By default classes and methods are final in Apex, thus we must declare them as virtual if we want to inherit or override them, respectively.
+
+ How do we make a class virtual?
+		In the class declaration we use the keyword virtual following the access modifier for the class.
+
+ This & Super Keywords
+ What is this. and this()?
+		this. is used to reference a instance variables or methods.
+		this() is used for constructor chaining, wherein one constructor calls another with a different signature.
+
+ What is the super keyword?
+		The super keyword can be used to override methods and constructors from the parent class.
+		public virtual class ExampleParent {
+			public virtual void HelloWorld() {
+				system.debug('Hello World!');
+			}
+		}
+		public class ExampleChild extends ExampleParent {
+			public override void HelloWorld() {
+				super.HelloWorld();
+				system.debug('Let me please introduce myself, I am a man of wealth and taste...');
+			}
+		}
+
+ Inner Class
+ What is an inner class?
+		An inner class is a class declared inside of another class, one common use case is for a wrapper class.
+
+ How many levels deep can inner classes go?
+		One.
+		
+ Constructors
+ What is a constructor?
+		A constructor is code that is invoked when an instance of a class is created.
+		By default a no argument constructor exists by default for apex classes, but if you declare your own constructor this default constructor goes away.
+
+ What is constructor chaining?
+		Constructor chaining uses the this() keyword to have one constructor call another.
+
+ SOQL
+ Syntax
+ What is the syntax for a soql query?
+		SELECT one or more fields 
+		FROM an object 
+		WHERE filter statements and, optionally, results are ordered 
+
+ LIMIT
+ What does limit do in a soql query?
+		Limits the number of results to the designated number.
+ OFFSET
+ What does offset do?
+		It offsets the result by the designated number from the beginning.
+		
+ WITH
+ What does the with clause do? 
+		The with clause is used to filter data based on the specific with clause used. 
+		WITH DATA CATEGORY filters by categorization.
+		WITH SECURITY_ENFORCED filters based on object and field level access.
+		Also to filter based on a user's profile feed.
+		
+ GROUP BY
+ What does group by do?
+		GROUP BY groups the results by a designated field.
+
+ HAVING
+ What does having do?
+		HAVING filters based on an aggregate function.
+		
+ FORMAT
+ What does format do?
+		Formats field to apply localized formatting to standard and custom number, date, time, and currency fields.
+		
+ FOR REFERENCE
+ What does for reference do?
+		For reference when used causes the records lastvieweddate to update, and adjust the recently viewed list. Only use it when it is actually referenced.
+
+ FOR UPDATE
+ What is the purpose of FOR UPDATE?
+		FOR UPDATE locks the record until the end of the current transaction. This avoids race conditions when mutiple users are interacting with the same record at once.
+		
+ Aggregate Functions
+ What are aggregate functions?
+		Aggregate functions aggregate specified information. Such as:
+			Count - Count of matching results.
+			Count_Distinct - Count of unique non-null matching results.
+			Min - minimum value from the aggregated results.
+			Max - maximum value from the aggregated result.
+			Sum - sum of the aggregated result.
+			Avg - average of the aggregated result.
+
+ Date Functions
+ What are date functions?
+		Date functions allow for queryies to be filtered or grouped by specific date values.
+		Examples include:
+			CALENDAR_MONTH
+			CALENDAR_QUARTER
+			CALENDAR_YEAR
+			FISCAL_MONTH
+			FISCAL_QUARTER
+			FISCAL_YEAR
+			DAY_IN_WEEK
+			DAY_IN_MONTH
+			DAY_IN_YEAR
+			
+
+ SOQL Relationship Queries
+ What are relationship queries?
+		Relationship queries exist in two forms. Child-to-parent, and parent-to-child, each requiring different syntax.
+		Child-to-parent:
+			Child to parent simply uses dot notation. 
+				[SELECT Id, Name, Account.Name FROM Contact] for example returns both the contact name and id, but also the associated account's name.
+		Parent-to-child:
+			Parent to child requires the use of a subquery.
+				[SELECT Id, (SELECT lastName FROM Contacts) FROM Account]
+				
+ What are some limits on relationship queries?
+		child to parent relationships can only go five deep.
+			contact.account.owner.manager.lastname
+		parent to child sub-queries can only go one deep.
+		
+ DML
+ What is DML?
+		Data manipulation language, the language we use to interact with the database.
+		We have two ways to perform DML operations inside salesforce. DML statements, and database class methods.
+		
+ DML Statements
+ What are the DML statements?
+		UPDATE
+		INSERT
+		UPSERT
+		DELETE
+		MERGE
+		UNDELETE
+		
+ Database Class
+ What are the database class methods for DML?
+		Database.update()
+		Database.insert()
+		Database.upsert()
+		Database.delete()
+		Database.merge()
+		Database.undelete()
+		Database.leadconvert()
+		
+ What sets the database methods apart from dml statements?
+		DML statements offer a simple way to perform DML that can throw exceptions.
+		The Database class allows you to write code that will not throw an exception, and you can instead handle using a saveresult list. Importantly to accomplish this you can set the allOrnone parameter to false, meaning that if one record fails for some reason, it will continue the operation. If set to true, if a single record fails it will throw an exception and largely function identically to a DML statement.
+
+ DML and Loops
+ When should you place a DML statement in a loop?
+		You should avoid this whenever possible in order to prevent hitting governor limits.
+		
+ When working with loops, how should you set up your data to be in accordance with best practices?
+		You should operate on the data in the loops and then add them to a collection, and then perform the needed DML to the collection outside the loop.
+		
+ Transaction Control
+ setSavepoint and rollback
+ What kind of transaction control do we have in salesforce, and how would we use it?
+		We can set save points at specified points in the code, and should we desire to, roll back the state of the database to a prior save point.
+		We would accomplish by using the follwoing:
+			Savepoint sp = Database.setSavepoint();
+			//... logic that alters the database...
+			Database.rollback(sp);
+			//Database restored to the state it was when the save point was created.
+
