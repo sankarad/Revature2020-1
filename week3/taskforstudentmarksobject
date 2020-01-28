@@ -1,0 +1,11 @@
+use
+a combo
+formula fields
+unique id
+workflow rule
+
+There can be only one student mark record per student per subject for a year
+example
+Ravis marks 35 Subject maths year 2020
+Ravis marks 36 subject maths year 2020 - is not ok
+But
