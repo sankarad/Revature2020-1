@@ -1,0 +1,6 @@
+
+    
+    @Invocablemethod(label='sample method1')
+    public static void method1(List<Id> ids){
+    system.debug('id of new record' + ids);
+        
