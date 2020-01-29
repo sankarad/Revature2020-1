@@ -1,0 +1,13 @@
+Create a process for student,using process builder and enable the following actions
+1. submit it for approval 
+
+   apporval process contains only one step,one action for approval,one action for rejection
+
+
+2. create an emergency contact for student
+3.update the record with description "process builder updated student record"
+4.create one dummy marks record for each student
+
+30 minutes - duration
+
+
