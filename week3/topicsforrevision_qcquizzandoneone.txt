@@ -1,0 +1,188 @@
+ Process Automation
+ Workflows
+
+		A workflow is an automatic process triggered by specific criteria set when it is created. A workflow rule is the container of this process and can be summed up as an if/then statement.
+		
+eval criteria:
+		When the record is:
+			Created  - The rule is evaluated only once, when the record is created.
+			Created and every time it is edited - The rule is evaluated multiple times, both when it is initially created and every time it is edited regardless of if the edit pertains to the criteria.
+			Created, and any time is is edited to subsequently meet criteria (default) - Allows the rule to be run multiple times. When the record is created, and when edited, but not when the edits are unrelated to the rule criteria.
+			
+ rule criteria
+		Criteria are met - You select a field from the record, an evaluation, and value. e.g. Amount equal or greater than 50,000.
+		Formula evaluates to true - You build a formula that evaluates to a boolean value. These can be more complex than a 'simple criteria are met' evaluation.
+		
+wf actions
+		Email Alert - Sends an email to the designated user using an email template.
+		Field Update - Updates a field on the record the workflow was invoked on.
+		Outbound Message - Sends an outbound message via the soap api.
+		Create Task - Creates a task.
+		Bonus: Flow Trigger - Launches a flow, this is currently pilot program only.
+
+ Approval Process
+ 
+		Approval processes allow you to create a multi-step process through which you can designate specific actions in reaction to the stage and approval status.
+		
+actions
+		Create Task, Email Alert, Field Update, Outbound Message. These behave identically to the workflow actions of the same name.
+		Additionally you can lock or unlock the record in specific steps.
+		
+steps
+		Initial Submission - When the record is submitted for approval, what actions are to be taken.
+		Approval steps - We can designate multiple steps each with their own actions.
+		Final approval - After it finshes all steps and finally approved, what do we want to have happen?
+		Final rejection - After it finishes all steps and finally rejected, what do we want to have happen?
+		Recall - If the submission is recalled, what do we want to have happen?
+
+ Process Builder
+
+		Process builder allows you to create automated processes execute upon specific criteria being met. It is similar in this respect to workflows, but has many additional features and enhanced capabilities.
+		
+process type
+		A record change process starts when a record is created or updated.
+		An event process starts when a platform event message is received.
+		An invocable process starts when something else, like another process, invokes it.
+		
+ What are the trigger options for when to start a process for a record change process?
+		Record created.
+		Record created or edited.
+		
+criteiera
+		Conditions are met - the process evaluates specific fields to see if they meet the designated values.
+		Formula evaluates to true - a formula built evaluates true, this allows for more complex criteria.
+		No Criteria - The actions are always executed.
+		Optionally at this point you can also select for it to only evaluate when the record is created or edited to meet criteria.
+		
+actions
+		Create Record - creates a new record using either the values you type or values of related records.
+		Invoke Process - invokes an invocable process.
+		Create Chatter Post - creates a chatter post on the feed of a user, group, or the record that started the process.
+		Use Quick Action - calls a quick action allowing for record creation, updates, or logging calls.
+		Work with Quip documents. - create quip documents, chat rooms and folder.
+		Launch a flow - launches a flow.
+		Send an Email - sends an email through the use of an email alert.
+		Send custom notification - sends a custom notification through salesforce.
+		Submit a record for approval - submits a record for an approval process. 
+		Send a survey - sends an email invitation linking to a survey question.
+		Update records - Update the fields of the launching record or related record.
+		Call Apex - call an invocable method from an apex class. With this it is essentially possible to do anything possible in salesforce with a process.
+
+apex
+		First the class must annotate the method you want to use with @InvocableMethod.
+		Select the call apex action and name the action.
+		Choose the apex class.
+		
+
+		Duplicate rules are administrative tools to automatically detect duplicate records, and determine if they are allowed with warning, or prevented from being created. To determine if a duplicate exists they use matching rules.
+
+
+		Matching rules specify what and how we check if a duplicate exists. We determine the fields that are checked, and if we check for a exact or fuzzy match.
+		
+
+ Flow Builder & Flows
+
+		Flows are a powerful click-not-code tool to perform actions in either your salesforce org or even exernal systems. 
+		Two types of flows exist: screen flows, and automlaunched flows.
+		
+screen flow
+		Screen flows are used to automate processes that require user input. Through it we can create guided wizards that take a user through a complex process in a guided experience.
+auto launch flow
+		When user input is not needed, we can leverage the same powerful capabilities of a flow that can act behind the scenes. Examples can include starting a flow on a button push or through a process.
+
+elements
+		Flow elements represent actions that a flow can execute, such as reading/writing data, displaying information through screens, and executing business logic.
+		
+resource
+		Flow resources reference values that can be referenced throughout the flow.
+		
+builder
+		The flow builder is a gui for flow creation. It features a canvas which represents the flow itself, and a toolbox which includes the elements and resources you can use to build the flow.
+		
+
+formula field data types
+		Checkbox - A boolean value
+		Currency - Returns a number in currency format. (Salesforce rounds the result to the nearest even number in tie breaks. 23.5 becomes 24, 22.5 becomes 22.)
+		Date
+		Date/time
+		Number
+		Percent
+		Text
+		Time
+
+
+		RegEx, or Regular Expressions are a sequence of characters that define a search pattern. This can be used in conjunction with validation rules to ensure things like phone numbers, zip codes, and more match the desired input format.
+\
+
+	Service Cloud is a CRM intended for support and service users.
+
+
+	A case is a customer’s question, feedback, or issue. 
+	Support agents can review cases to see how they can deliver better service. 
+	Sales reps can use cases to see how they affect the sales process. 
+	Responding to cases keeps your customers happy and enhances your brand.
+
+
+	Assignment rules define conditions that determine how leads or cases are assigned to owners. 
+	The rules assign leads and cases to the specified user or queue.
+
+why use queue
+	Prioritize and assign records to teams that share workloads. 
+	There’s no limit to the number of queues you can create.
+	you can choose when queue members receive email notifications.
+
+
+
+	Knowledge lets you create and manage a knowledge base with your company information, and securely share it when and where it's needed.
+
+	Ideas allows an organization to create a community which allows users to post and vote on ideas and recommendations. Public or private, you can allow for customers, employees, or partners to collaborate with your company.
+
+	Answers and Chatter Answers were phased out in the spring '18 update. Instead we now have the ability to ask questions via chatter, which allows for similar functionality.
+
+ Data Management
+ Data
+       clean data
+		Complete
+			The data should be whole, the more complete the data, the better it is.
+		Consistent
+			The data needs to be consistent in that the data should all be collected in the way that is expected.
+		Current
+			Out of date data can lead to issues, so we want to ensure the data is up to date.	
+		Unique
+			We do not want to have redundancy of data, there is no need to have multiple versions of the same contact for instance instead of a single complete version.	
+		Accuracy
+			We want to ensure the data is accurate.
+		Valid
+			Does the data actually fit the needs of the org? 
+			
+ data completeness
+		Required Fields
+			
+data consistent if
+		Validation Rules
+		
+data is current if
+		Workflows and Processes can be used to update fields when relevant things change.
+
+
+		Duplicate Rules -unique data
+		
+
+		data accuracy is achieved using Processes, Paths, and Flows. 
+		data.com
+		
+
+		
+
+ Validation Tools
+
+		Validation Rules and data.com.
+read up difference between import wizard and data loader
+
+		
+		Export all will also export reords in the recycle bin, of soft deleted items.
+		
+		Hard delete bypasses the recycle bin and permanently removes the records.
+
+		
+
